@@ -1,5 +1,6 @@
 <?php
 
+use App\User;
 use Illuminate\Support\Facades\Route;
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;
@@ -109,6 +110,31 @@ Route::group(['prefix' => 'admin'], function () {
     });
 });
 
+
+
+//=========== Role  ADMIN CAN USED FEATURE   ============== //
+
+
+Route::group(['middleware' => ['role:admin']], function () {
+    Route::get("admin/manage", function(){
+        return "Admin manage";
+    });
+});
+
+
+//=========== Role  STORE  CAN USED FEATURE   ============== //
+
+
+Route::group(['middleware' => ['role:store']], function () {
+    Route::get("store/manage", function(){
+        return  "Store manage";
+    });
+});
+
+
+
+
+
 //=========== make role  ============== //
 
 
@@ -132,7 +158,7 @@ Route::get('/make-role', function(){
 });
 
 
-Route::get('/assign-role', function(){
+Route::get('/assign-role-admin', function(){
     
     /* assign role admin */
 
@@ -141,3 +167,15 @@ Route::get('/assign-role', function(){
     
 
 });
+
+
+Route::get('/assign-role-store', function(){
+    
+    /* assign role admin */
+
+    $user = User::find(6); 
+    $user->assignRole(['store', 'staff']);
+    
+
+});
+

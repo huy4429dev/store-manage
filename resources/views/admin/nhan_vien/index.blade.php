@@ -27,11 +27,11 @@
         </div>
     @endif
 
-    <div class="callout-top callout-top-danger">
+    <div class="callout-top callout-top-info">
         <table id="data-table" align="center" width="100%"
                class="table table-hover table-striped table-bordered border text-center display">
             <thead>
-            <tr class="bg-danger">
+            <tr class="bg-info">
                 <th>Mã nhân viên</th>
                 <th>Tên đầy đủ</th>
                 <th>Email</th>

@@ -19,11 +19,11 @@
     <br><br>
     <h3>Những sản phẩm bán chạy</h3>
     <br>
-    <div class="callout-top callout-top-danger">
+    <div class="callout-top callout-top-success">
         <table id="data-table" align="center" width="100%"
                class="table table-hover table-striped table-bordered border text-center display">
             <thead>
-            <tr class="bg-danger">
+            <tr class="bg-info">
                 <th scope="col">STT</th>
                 <th scope="col">Tên sản phẩm</th>
                 <th scope="col">Số lượng</th>

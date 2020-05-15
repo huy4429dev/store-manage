@@ -46,6 +46,7 @@ class ChamCongController extends Controller
             ]);
         }
         $data = cham_cong::with('user')->where('thang', $date['mon'])->where('nam', $date['year'])->get();
+
         return view('admin.cham_cong.create', compact('data'));
 
     }
